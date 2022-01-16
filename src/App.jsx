@@ -4,12 +4,14 @@ import axios from "axios";
 import Weather from "./components/Weather";
 import "./App.css";
 
+const PORT = process.env.PORT;
+
 export default function App() {
   const [location, setLocation] = useState("");
   const [weather, setWeather] = useState();
 
   const getWeather = async () => {
-    const { data } = await axios.get(`/weather?address=${location}`);
+    const { data } = await axios.get(`:${PORT}/weather?address=${location}`);
     console.log(data);
     setWeather(data);
   };
