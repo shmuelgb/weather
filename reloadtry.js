@@ -9,7 +9,7 @@ const publicDirectoryPath = path.join(__dirname, "../public");
 const liveReloadServer = livereload.createServer();
 liveReloadServer.watch(publicDirectoryPath);
 
-// ping browser on Express boot, once browser has reconnected and handshaken
+// ping browser on Express boot, once browser has reconnected and handshakeng
 liveReloadServer.server.once("connection", () => {
   setTimeout(() => {
     liveReloadServer.refresh("/");
