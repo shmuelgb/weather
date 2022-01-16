@@ -11,7 +11,7 @@ export default function App() {
   const [weather, setWeather] = useState();
 
   const getWeather = async () => {
-    const { data } = await axios.get(`:${PORT}/weather?address=${location}`);
+    const { data } = await axios.get(`/weather?address=${location}`);
     console.log(data);
     setWeather(data);
   };
