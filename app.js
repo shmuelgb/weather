@@ -1,4 +1,4 @@
-// const path = require("path");
+const path = require("path");
 const express = require("express");
 // const hbs = require("hbs");
 const geocode = require("./utils/geocode");
@@ -11,8 +11,9 @@ app.options("*", cors());
 const port = process.env.PORT || 3001;
 console.log("port", port);
 
-// // Define paths for Express config
-// const publicDirectoryPath = path.join(__dirname, "../public");
+// Define paths for Express config
+const publicDirectoryPath = path.join(__dirname, "client/build");
+app.use(express.static(publicDirectoryPath));
 // const viewsPath = path.join(__dirname, "../templates/views");
 // const partialsPath = path.join(__dirname, "../templates/partials");
 
