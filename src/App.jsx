@@ -4,8 +4,6 @@ import axios from "axios";
 import Weather from "./components/Weather";
 import "./App.css";
 
-const PORT = process.env.PORT;
-
 export default function App() {
   const [location, setLocation] = useState("");
   const [weather, setWeather] = useState();

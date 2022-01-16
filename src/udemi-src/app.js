@@ -8,8 +8,8 @@ const cors = require("cors");
 const app = express();
 app.use(cors());
 app.options("*", cors());
-console.log(cors());
 const port = process.env.PORT || 3001;
+console.log("port", port);
 
 // // Define paths for Express config
 // const publicDirectoryPath = path.join(__dirname, "../public");
