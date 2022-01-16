@@ -46,7 +46,7 @@ console.log("port", port);
 //     });
 // });
 
-app.get("/weather", cors(), (req, res) => {
+app.get("/api/weather", (req, res) => {
   if (!req.query.address) {
     return res.send({
       error: "You must provide an address!",
